@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Bootcamp Currency Exchange</title>
+    <title>Bootcamp Currency Converter</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   
 </head>
+
+
 <body>
-    <header>
-        <h1>Currency Exchanger</h1>
-    </header>
-
-    <form>
-    <div>   
-        <input id="amount" type="text" placeholder="amount"/>
-    </div>    
-    <div>
-        <select name="country" id="CountryO">
-            <option value="">Select One …</option>
-                            
-        </select>
+   
+    <header><h1>3-Dollar Currency Converter</h1></header>
+    <div class="wrapper">
+        
+        <form action="#">
+            <div class="amount">
+                <p>Enter Amount</p>
+                <input type="text" value="1">
+            </div>
+            <div class="drop-list">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select-box">
+                        <figure>
+                        <img src="https://countryflagsapi.com/png/us" alt="flag" height="50px">
+                        </figure>
+                        <select>
+                            <option value="USD">USD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="AUD">AUD</option>
+                        </select>
+                    </div>
+                </div>
+                <figure class="icon"><i class="fas fa-exchange-alt"></i></figure>
+                <div class="to">
+                    <p>To</p>
+                    <div class="selcet-box">
+                        <figure>
+                        <img src="https://countryflagsapi.com/png/ca" alt="flag" height="50px">
+                        </figure>
+                        <select>
+                            <option value="USD">USD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="AUD">AUD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    <div>
-        <select name="country" id="CountryE">
-            <option value="">Select One …</option>
-                            
-        </select>
-    </div>
-    <button type="button">Submit</button>
-    </form>
-    <section>
-        <!-- add country information -->
-    </section>
-
-
 
 </body>
+
 </html>
