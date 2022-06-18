@@ -1,62 +1,111 @@
-@import url('httpl://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap')
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
-header{
+/*css to give the body a background color, make it a flex item, center the content, and match the height of the body to the viewport*/
+body{
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 40px;
-    background-color: #A9D18E
-
+    min-height: 100vh;
+    background: #A9d18e;
+}
+/*everything within the wrapper class will have the lighter green background color, also asign a width and some spacing*/
+.wrapper{
+    background: #ECF5E7;
+    padding: 30px;
+    border-radius: 7px;
+    width: 370px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
-
-h1{
-    color: white;
+.wrapper header{
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
 }
 
+.wrapper form{
+    margin: 40px 0 20px 0;
+}
 
+form :where(inout, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
 
-form {
-   
+form p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input{
+    height: 50px;
+    border: 1px solid darkgreen;
+    font-size: 17px;
+    padding: 0 15px;
+
+}
+
+form input:focus{
+    padding: 0 14px;
+    border: 1px solid darkgreen;
+}
+
+form .drop-list{
     display: flex;
-    padding: 10px;
-    background-color: #ECF5E7;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-form div {
-    margin-right: 20px;
-    flex-direction: row;
-
-}
-
-form div figure{
-    margin-right: 25px;
-}
-
-.to {
-     margin-left: 45px;
-}
-
-.drop-list{
+.drop-list .select-box{
     display: flex;
+    height: 45px;
+    width: 115px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid darkgreen;
 }
 
-.drop-list div {
-    flex-direction: row;
-    justify-content: space-around;
+.select-box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
 }
 
- 
+.select-box img{
+    max-width: 40px;
+}
 
+.drop-list .icon{
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 30px;
+}
 
+form .exchange-rate{
+    font-size: 17px;
+    margin: 20px 0 30px;
+}
+
+form button{
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: darkgreen;
+}
 
 
 
