@@ -93,7 +93,13 @@ form .drop-list{
     font-size: 22px;
     margin-top: 30px;
 }
-
+.history-wrapper{
+    background: #A9d18e;
+    padding: 30px;
+    border-radius: 7px;
+    width: 370px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 form .exchange-rate{
     font-size: 17px;
     margin: 20px 0 30px;
