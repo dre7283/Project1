@@ -11,6 +11,7 @@ var fromImageEl = document.querySelector("#from-image")
 var toImageEl = document.querySelector("#to-image")
 var getBtn = document.querySelector("#get-button")
 var historyEl = document.querySelector("#history")
+var historyWrapperEl= document.querySelector(".history-wrapper")
 var results = []
 var clearBtn = document.querySelector("#clear-button")
 
@@ -34,6 +35,7 @@ function getExchangeRate(event) {
             results.push(exchangeRateEl.textContent)
             localStorage.setItem("currency", JSON.stringify(results))
             displayHistory()
+
         })
 }
 
@@ -41,6 +43,7 @@ function displayHistory() {
     var currencyHistory = JSON.parse(localStorage.getItem("currency"))
     if (currencyHistory) {
         results = currencyHistory
+        clearBtn.classList.remove("hide")
     }
     historyEl.innerHTML = ""
     for (i = 0; i < results.length; i++) {
@@ -69,4 +72,7 @@ formEl.addEventListener("submit", getExchangeRate)
 
 displayHistory();
 
+function clearHistory(){
 
+}
+getBtn.addEventListener("click", clearHistory)
