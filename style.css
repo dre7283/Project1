@@ -89,7 +89,7 @@ form .drop-list{
 }
 
 .drop-list .icon{
-    cursor: pointer;
+
     font-size: 22px;
     margin-top: 30px;
 }
@@ -114,6 +114,10 @@ form button, #clear-button{
     width: 370px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+}
+
+ul {
+    list-style: none;
 }
 
 .hide{

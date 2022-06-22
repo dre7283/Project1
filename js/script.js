@@ -11,7 +11,7 @@ var fromImageEl = document.querySelector("#from-image")
 var toImageEl = document.querySelector("#to-image")
 var getBtn = document.querySelector("#get-button")
 var historyEl = document.querySelector("#history")
-var historyWrapperEl= document.querySelector(".history-wrapper")
+var historyWrapperEl = document.querySelector(".history-wrapper")
 var results = []
 var clearBtn = document.querySelector("#clear-button")
 
@@ -72,7 +72,8 @@ formEl.addEventListener("submit", getExchangeRate)
 
 displayHistory();
 
-function clearHistory(){
-
+function clearHistory() {
+    localStorage.removeItem("currency");
+    location.reload();
 }
-getBtn.addEventListener("click", clearHistory)
+clearBtn.addEventListener("click", clearHistory)
