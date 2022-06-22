@@ -14,6 +14,7 @@ var historyEl = document.querySelector("#history")
 var historyWrapperEl = document.querySelector(".history-wrapper")
 var results = []
 var clearBtn = document.querySelector("#clear-button")
+var searchDisplayEl = document.querySelector("#search-display")
 
 for (let i = 0; i < dropListEl.length; i++) {
     console.log(dropListEl[i].value)
@@ -43,11 +44,12 @@ function displayHistory() {
     var currencyHistory = JSON.parse(localStorage.getItem("currency"))
     if (currencyHistory) {
         results = currencyHistory
+        searchDisplayEl.classList.remove("hide")
         clearBtn.classList.remove("hide")
     }
     historyEl.innerHTML = ""
     for (i = 0; i < results.length; i++) {
-        historyEl.innerHTML = historyEl.innerHTML + results[i]
+        historyEl.innerHTML = historyEl.innerHTML + results[i] + "; "
 
     }
 }
