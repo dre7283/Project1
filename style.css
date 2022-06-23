@@ -25,7 +25,7 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
+/*css to align the header text, set the font size, and then spacing for the wrapper around the form below*/
 .wrapper header{
     font-size: 28px;
     font-weight: bolder;
@@ -36,6 +36,7 @@ body{
     margin: 40px 0 20px 0;
 }
 
+/*format buttons*/
 form :where(inout, select, button), #clear-button{
     width: 100%;
     outline: none;
@@ -43,10 +44,12 @@ form :where(inout, select, button), #clear-button{
     border-radius: 5px;
 }
 
+/*font size for text in form*/
 form p{
     font-size: 18px;
     margin-bottom: 5px;
 }
+
 
 form input{
     height: 50px;
@@ -68,6 +71,7 @@ form .drop-list{
     justify-content: space-between;
 }
 
+/*styling for currency option select boxes*/
 .drop-list .select-box{
     display: flex;
     height: 45px;
@@ -84,10 +88,12 @@ form .drop-list{
     margin: 0 -5px 0 5px;
 }
 
+/*image size for flags*/
 .select-box img{
     max-width: 40px;
 }
 
+/*icon spacing and size*/
 .drop-list .icon{
 
     font-size: 22px;
@@ -116,10 +122,12 @@ form button, #clear-button{
 
 }
 
+/*remove numbering from list*/
 ol {
     list-style: none;
 }
 
+/*hide search history until Get Exchange RAte button is clicked*/
 .hide{
     display: none;
 }
