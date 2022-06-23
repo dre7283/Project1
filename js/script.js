@@ -1,6 +1,6 @@
 var exchangeRateEl = document.querySelector(".exchange-rate")
 
-
+//Defining variables below; grabbing static selectors from html//
 
 var enterAmountEl = document.querySelector("#enter-amount")
 var dropListEl = document.querySelectorAll(".option");
@@ -16,10 +16,7 @@ var results = []
 var clearBtn = document.querySelector("#clear-button")
 var searchDisplayEl = document.querySelector("#search-display")
 
-for (let i = 0; i < dropListEl.length; i++) {
-    console.log(dropListEl[i].value)
-
-}
+//Gets currency exchange rate from the API, then performs the desired conversion using a math equation//
 
 function getExchangeRate(event) {
     event.preventDefault()
@@ -40,6 +37,7 @@ function getExchangeRate(event) {
         })
 }
 
+//Function below stores previous conversion results in local storage, then displays each result in a list//
 function displayHistory() {
     var currencyHistory = JSON.parse(localStorage.getItem("currency"))
     if (currencyHistory) {
@@ -54,14 +52,16 @@ function displayHistory() {
     }
 }
 
+//This function gets flag image from an API and dislays the corresponding flag when that country's currency option is selected//
 function changeFromImage() {
     var flagURL = `https://countryflagsapi.com/png/${fromCurrencyEl.value.substring(0, 2)}`
     fromImageEl.src = flagURL
 }
 
-
+//triggers the flag change when the option is selected//
 fromCurrencyEl.addEventListener("change", changeFromImage)
 
+//Same aas change fromImage function, but for the toImage//
 function changeToImage() {
     var flagURL = `https://countryflagsapi.com/png/${toCurrencyEl.value.substring(0, 2)}`
     toImageEl.src = flagURL
@@ -74,6 +74,7 @@ formEl.addEventListener("submit", getExchangeRate)
 
 displayHistory();
 
+//Clears local storage/search history when the Clear History button is pressed//
 function clearHistory() {
     localStorage.removeItem("currency");
     location.reload();
