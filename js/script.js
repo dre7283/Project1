@@ -49,7 +49,7 @@ function displayHistory() {
     }
     historyEl.innerHTML = ""
     for (i = 0; i < results.length; i++) {
-        historyEl.innerHTML = historyEl.innerHTML + results[i] + "; "
+        historyEl.innerHTML = historyEl.innerHTML + "<li>" + results[i] + "</li>"
 
     }
 }
