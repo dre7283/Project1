@@ -133,5 +133,18 @@ ol {
 }
 
 
+/*makes the app responsive for smaller screens, centers the form and makes the history appear below the form instead of compressing to the right. Keeps the UI clean. */
+
+
+@media only screen and (max-width: 768px){
+    
+    body{
+        display: block;
+    }
+    .wrapper, .history-wrapper{
+        margin: auto;
+        min-width: 100vw;
+    }
+}
 
 
