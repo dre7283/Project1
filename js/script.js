@@ -61,7 +61,7 @@ function changeFromImage() {
 //triggers the flag change when the option is selected//
 fromCurrencyEl.addEventListener("change", changeFromImage)
 
-//Same aas change fromImage function, but for the toImage//
+//Same as change fromImage function, but for the toImage//
 function changeToImage() {
     var flagURL = `https://countryflagsapi.com/png/${toCurrencyEl.value.substring(0, 2)}`
     toImageEl.src = flagURL
