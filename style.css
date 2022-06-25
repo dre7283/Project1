@@ -1,0 +1,150 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*css to give the body a background color, make it a flex item, center the content, and match the height of the body to the viewport*/
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #A9d18e;
+}
+/*everything within the wrapper class will have the lighter green background color, also asign a width and some spacing*/
+.wrapper{
+    background: #ECF5E7;
+    padding: 30px;
+    border-radius: 7px;
+    width: 370px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*css to align the header text, set the font size, and then spacing for the wrapper around the form below*/
+.wrapper header{
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.wrapper form{
+    margin: 40px 0 20px 0;
+}
+
+/*format buttons*/
+form :where(inout, select, button), #clear-button{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/*font size for text in form*/
+form p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+form input{
+    height: 50px;
+    border: 1px solid darkgreen;
+    font-size: 17px;
+    padding: 0 15px;
+
+}
+
+form input:focus{
+    padding: 0 14px;
+    border: 1px solid darkgreen;
+}
+
+form .drop-list{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*styling for currency option select boxes*/
+.drop-list .select-box{
+    display: flex;
+    height: 45px;
+    width: 115px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid darkgreen;
+}
+
+.select-box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+}
+
+/*image size for flags*/
+.select-box img{
+    max-width: 40px;
+}
+
+/*icon spacing and size*/
+.drop-list .icon{
+
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+form .exchange-rate{
+    font-size: 17px;
+    margin: 20px 0 30px;
+}
+
+form button, #clear-button{
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: darkgreen;
+}
+
+.history-wrapper{
+    background: #A9d18e;
+    padding: 30px;
+    border-radius: 7px;
+    width: 370px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/*remove numbering from list*/
+ol {
+    list-style: none;
+}
+
+/*hide search history until Get Exchange RAte button is clicked*/
+.hide{
+    display: none;
+}
+
+
+/*makes the app responsive for smaller screens, centers the form and makes the history appear below the form instead of compressing to the right. Keeps the UI clean. */
+
+
+@media only screen and (max-width: 768px){
+    
+    body{
+        display: block;
+    }
+    .wrapper, .history-wrapper{
+        margin: auto;
+        min-width: 100vw;
+    }
+}
+
+
